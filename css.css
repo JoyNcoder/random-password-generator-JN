@@ -1,0 +1,104 @@
+*{box-sizing: border-box; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+body{margin: 0; text-align: center; background-image: url(img/bg.png);
+    background-repeat: no-repeat; background-size: cover; background-position: center center; }
+:root{--bd: 1px solid black;}
+.title{margin-top: 45px;}
+
+.container{
+    display: flex; flex-direction: column; align-items: center; position: relative;
+    width: 600px; height:800px; margin: 0 auto; border: var(--bd); padding: 50px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; border-radius: 50px;
+    background-color: transparent; backdrop-filter: blur(4px);
+}
+.length{ display: flex; flex-direction: column; width: fit-content; margin: 50 auto; }
+.length input{
+    font-size: 2em; text-align: center; background-color: transparent;
+    border-left: 0; border-right: 0; border-top: 0;
+    border-bottom: 2px solid black;
+}
+.length input:focus{
+    outline: 0; border-left: 0; border-right: 0; border-top: 0; }
+input::-webkit-inner-spin-button, input::-webkit-outer-spin-button { -webkit-appearance: none; }
+.length label{
+    pointer-events: none; opacity: 70%; color: gray;
+    font-size: 1.3em; font-weight: 500;
+    transform: translateY(30px); transition: transform .2s ease;
+}
+.length:has(input:hover) label{transform: translateY(-10px);transition: transform .2s ease;}
+.length:has(input:focus) label,
+.length:has(input:not(:placeholder-shown)) label {
+    transform: translateY(-10px);
+}
+
+
+.lowercase{
+    display: flex; align-items: center;
+    width: fit-content; padding: 10px;
+}
+.lowercase label{
+    font-size: 1.5em; font-weight: 500; margin-right: 15px; cursor: pointer; 
+    transition: transform .2s ease;
+}
+.lowercase label:hover{transform: scale(1.04); transition: transform .2s ease;}
+.lowercase input{
+    height: 20px; width: 20px; cursor: pointer;
+}
+.lowercase input:checked {
+    accent-color: rgb(0, 255, 0); 
+    box-shadow: 0 0 8px 5px rgb(124, 250, 124);
+}
+
+.uppercase{
+    display: flex; align-items: center;
+    width: fit-content; padding: 10px; margin-top: 10px;
+}
+.uppercase label{
+    font-size: 1.5em; font-weight: 500; margin-right: 13px; cursor: pointer;
+    transition: transform .2s ease; 
+}
+.uppercase label:hover{transform: scale(1.04); transition: transform .2s ease;}
+.uppercase input{
+    height: 20px; width: 20px; cursor: pointer;
+}
+.uppercase input:checked {
+    accent-color: rgb(0, 255, 0); 
+    box-shadow: 0 0 8px 5px rgb(124, 250, 124);
+}
+
+.numbers{
+    display: flex; align-items: center;
+    width: fit-content; padding: 10px; margin-top: 10px;
+}
+.numbers label{
+    font-size: 1.5em; font-weight: 500; margin-right: 13px;
+    cursor: pointer; transition: transform .2s ease;
+}
+.numbers label:hover{transform: scale(1.04); transition: transform .2s ease;}
+.numbers input{ height: 20px; width: 20px; cursor: pointer; }
+.numbers input:checked { accent-color: rgb(0, 255, 0); box-shadow: 0 0 8px 5px rgb(124, 250, 124); }
+
+.spchar{
+    display: flex; align-items: center; width: fit-content; padding: 10px; margin-top: 10px; }
+.spchar label{
+    font-size: 1.5em; font-weight: 500; margin-right: 13px;
+    cursor: pointer; transition: transform .2s ease;
+}
+.spchar label:hover{ transform: scale(1.04); transition: transform .2s ease; }
+.spchar input{ height: 20px; width: 20px; cursor: pointer; }
+.spchar input:checked { accent-color: rgb(0, 255, 0); box-shadow: 0 0 8px 5px rgb(124, 250, 124); }
+
+.container button:not(#copy){
+    margin-top: 80px; font-size: 40px; padding:10px; width: 400px; height: 90px;
+    border-radius: 20px; border: none; background-color: rgb(0, 200, 0); color:white; transition: all .2s ease;
+}
+.container button:hover:not(#copy){ background-color: rgba(0, 200, 0, .5); color: black; }
+.container button:active:not(#copy){ outline: 2px solid black; }
+
+.passDiv{
+    position: absolute; bottom:0; margin-bottom: 40px;
+}
+#password{
+    width: 300px; height: 60px; outline: none; font-size: 30px; padding: 20px 10px;
+    border-radius: 15px; border: 1px solid black; cursor:default;
+    box-shadow: rgb(38, 57, 77) 0px 15px 20px -12px; background-color: rgba(172, 183, 195, 0.1);
+}
