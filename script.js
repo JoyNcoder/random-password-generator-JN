@@ -20,7 +20,7 @@ function makePassword(){
     bigString += isNumbers.checked? numbers : "";
     bigString += isSpecial.checked? spChars : "";
 
-    if(Length.value <=0 || Length.value>50){
+    if(Length.value <=5 || Length.value>50){
         show.style.color='red';
         show.textContent="Length is invalid. Choose 6-50";
     }else{
@@ -39,7 +39,7 @@ function makePassword(){
             showPassword.onclick = function() {
                 show.style.color="black"; show.textContent = "copied!";
                 navigator.clipboard.writeText(password);
-                setTimeout(function() {show.textContent = "";}, 800);
+                setTimeout(function() {show.textContent = "";}, 700);
             };
             
         }
