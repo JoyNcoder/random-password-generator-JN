@@ -14,19 +14,31 @@
             </div>
             <div class="lowercase">
                 <label for="lowerCase">Want Lowercase Letters?</label>
-                <input type="checkbox" id="lowerCase">
+                <div class="checkbox-wrapper-10">
+                    <input class="tgl tgl-flip" type="checkbox" id="lowerCase"/>
+                    <label class="tgl-btn" data-tg-off="Nope" data-tg-on="Yeah!" for="lowerCase"></label>
+                </div>
             </div>
             <div class="uppercase">
                 <label for="upperCase">Want Uppercase Letters?</label>
-                <input type="checkbox" id="upperCase">
+                <div class="checkbox-wrapper-10">
+                    <input class="tgl tgl-flip" type="checkbox" id="upperCase"/>
+                    <label class="tgl-btn" data-tg-off="Nope" data-tg-on="Yeah!" for="upperCase"></label>
+                </div>
             </div>
             <div class="numbers">
                 <label for="Numbers">Want Random Numbers?</label>
-                <input type="checkbox" id="Numbers">
+                <div class="checkbox-wrapper-10">
+                    <input class="tgl tgl-flip" type="checkbox" id="Numbers"/>
+                    <label class="tgl-btn" data-tg-off="Nope" data-tg-on="Yeah!" for="Numbers"></label>
+                </div>
             </div>
             <div class="spchar">
                 <label for="spChar">Want Special Characters?</label>
-                <input type="checkbox" id="spChar">
+                <div class="checkbox-wrapper-10">
+                    <input class="tgl tgl-flip" type="checkbox" id="spChar"/>
+                    <label class="tgl-btn" data-tg-off="Nope" data-tg-on="Yeah!" for="spChar"></label>
+                </div>
             </div>
             <button id="Generate" onclick="makePassword()">Make My Password</button>
             <h3 id="Result"></h3>
@@ -36,7 +48,6 @@
         </div>
 
 
-        
      <script src="script.js"></script>
     </body>
 </html>
